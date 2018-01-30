@@ -6,10 +6,10 @@ ul
         .pull-left
           img.media-object src='{{message.sender.image}}' width='50' height='50' alt=''
         .media-body
-          strong.text-overflow
+          strong.text-truncate
             | {{message.sender.name}}
           .text-muted
-            span.text-overflow
+            span.text-truncate
               | {{message.body}}
             small
               | {{localize "datetime.formats.message" message.date_sent}}

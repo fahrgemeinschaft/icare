@@ -1,5 +1,5 @@
 @import "twbs-variables";
-@import "twbs/bootstrap/mixins";
+@import "bootstrap/mixins";
 
 .conversation-title {
   font-size: 24px;
@@ -9,7 +9,7 @@
 // scss-lint:disable ImportantRule
 tr.unread td,
 .unread {
-  background-color: $state-warning-bg !important;
+  background-color: theme-color-level('warning', $alert-bg-level) !important;
 }
 // scss-lint:enable ImportantRule
 
@@ -42,7 +42,7 @@ tr.unread td,
     width: 60px;
 
     img {
-      @include square(50px);
+      @include size(50px);
     }
   }
 

@@ -1,17 +1,17 @@
 @import "twbs-variables";
-@import "twbs/bootstrap/mixins";
+@import "bootstrap/mixins";
 
 footer {
-  padding: $line-height-computed 0;
-  margin-top: $line-height-computed;
+  padding: $line-height-base 0;
+  margin-top: $line-height-base;
   font-size: $font-size-base + 1;
-  color: $gray;
-  border-top: 1px solid $hr-border;
+  color: $gray-500;
+  border-top: $hr-border-width solid $hr-border-color;
 
   a,
   a:hover,
   a:focus {
-    color: $gray;
+    color: $gray-500;
   }
 }
 
@@ -33,7 +33,7 @@ footer {
   color: $text-muted;
 }
 
-@media (min-width: $screen-sm-min) {
+@include media-breakpoint-up(sm) {
   .list-footer > li {
     display: inline-block;
     margin-bottom: 0;

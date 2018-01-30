@@ -1,4 +1,4 @@
-#= require jquery
+#= require jquery3
 #= require jquery_ujs
 #= require turbolinks
 #= require initialize_on_event
@@ -11,18 +11,7 @@
 #= require rails.validations.simple_form
 
 # BOOTSTRAP
-#= require twbs/bootstrap/transition
-#= require twbs/bootstrap/alert
-#= require twbs/bootstrap/button
-# require twbs/bootstrap/carousel
-#= require twbs/bootstrap/collapse
-#= require twbs/bootstrap/dropdown
-#= require twbs/bootstrap/modal
-#= require twbs/bootstrap/tooltip
-#= require twbs/bootstrap/popover
-# require twbs/bootstrap/scrollspy
-# require twbs/bootstrap/tab
-# require twbs/bootstrap/affix
+#= require bootstrap
 
 # HANDLEBARS TEMPLATES
 #= require handlebars.runtime

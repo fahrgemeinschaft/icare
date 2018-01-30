@@ -1,8 +1,8 @@
 @import "twbs-variables";
-@import "twbs/bootstrap/mixins";
+@import "bootstrap/mixins";
 
 body {
-  padding-top: $navbar-height + 10px;
+  padding-top: 3.5rem;
 }
 
 .diowa-logo {
@@ -23,8 +23,8 @@ body {
 }
 
 .heading-margins {
-  margin-top: $line-height-computed;
-  margin-bottom: $line-height-computed / 2;
+  margin-top: $line-height-base;
+  margin-bottom: $line-height-base / 2;
 }
 
 .pacifico {
@@ -44,8 +44,8 @@ body {
   display: none;
 }
 
-.text-overflow {
-  @include text-overflow;
+.text-truncate {
+  @include text-truncate;
 }
 
 // scss-lint:disable ImportantRule
@@ -61,7 +61,7 @@ body {
 }
 
 .mock {
-  @include opacity(.6);
+  opacity: .6;
 }
 
 .balloon {
@@ -78,7 +78,7 @@ body {
     top: 50%;
     right: 100%;
     pointer-events: none;
-    @include square(0);
+    @include size(0);
     content: " ";
     border: solid transparent;
   }
@@ -96,7 +96,7 @@ body {
   }
 
   &.for-profile-picture {
-    min-height: 60 - $line-height-computed;
+    min-height: 60 - $line-height-base;
     margin-left: 5px;
 
     &:after,
@@ -112,7 +112,7 @@ body {
 
   &:before {
     position: absolute;
-    @include square(100%);
+    @include size(100%);
     content: "";
     border: 1px solid fade-out(#000, .9);
   }
@@ -124,7 +124,7 @@ body {
 
 // scss-lint:disable ImportantRule
 .btn-checkbox {
-  margin-bottom: ($line-height-computed / 2);
+  margin-bottom: ($line-height-base / 2);
   user-select: none;
 
   span.fa,
@@ -167,7 +167,7 @@ body {
   color: $pink;
 }
 
-@media (min-width: $screen-sm-min) {
+@include media-breakpoint-up(sm) {
   .display-table-sm {
     display: table;
     width: 100%;

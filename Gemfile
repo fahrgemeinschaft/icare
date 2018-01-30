@@ -61,14 +61,15 @@ gem 'slim-rails', '~> 3.1'
 
 # Assets
 gem 'autoprefixer-rails', '~> 7.2'
+gem 'bootstrap', '~> 4.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'handlebars_assets', '~> 0.23.2'
 gem 'i18n-js', '~> 3.0'
+gem 'popper_js', '~> 1.12'
 gem 'sass-rails', '~> 5.0'
 gem 'sprockets', '~> 3.7'
 gem 'sprockets-rails', '~> 3.2'
 gem 'turbolinks', '~> 5.1'
-gem 'twbs_sass_rails', '~> 4.7'
 gem 'uglifier', '~> 4.1'
 
 group :development, :test do

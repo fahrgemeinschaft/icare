@@ -1,25 +1,25 @@
 @import "twbs-variables";
-@import "twbs/bootstrap/mixins";
+@import "bootstrap/mixins";
 
-$background: lighten($brand-success, 5%);
+$background: lighten($success, 5%);
 
 .navbar-default .navbar-nav > li.notifications {
   position: relative;
 
   &.read > a {
-    color: fade-out(darken($navbar-default-bg, 40%), .55);
+    color: fade-out(darken(#fff, 40%), .55);
   }
 
   &.active > a {
-    color: $navbar-default-link-active-color;
+    color: $navbar-light-active-color;
   }
 
   > a {
-    height: $navbar-height;
+    height: 3.5rem;
 
     &:focus,
     &:hover, {
-      color: $navbar-default-link-hover-color;
+      color: $navbar-light-hover-color;
     }
   }
 
@@ -28,19 +28,19 @@ $background: lighten($brand-success, 5%);
     top: 4px;
     right: 4px;
     display: none;
-    @include square(16px);
+    @include size(16px);
     font-size: 10px;
     line-height: 16px;
     color: #fff;
     text-align: center;
-    background-color: $brand-danger;
+    background-color: $danger;
     border-radius: 100%;
   }
 }
 
 .notifications-icon.fa {
   font-size: 20px;
-  @include square(20px);
+  @include size(20px);
   line-height: 20px;
 }
 
@@ -60,7 +60,7 @@ $background: lighten($brand-success, 5%);
           display: block;
           padding: 5px;
           line-height: 16px;
-          color: $text-color;
+          color: $body-color;
           text-decoration: none;
 
           &:focus,
@@ -98,8 +98,8 @@ $background: lighten($brand-success, 5%);
     padding: 8px 14px;
     line-height: 18px;
     text-align: center;
-    border-top: 1px solid darken($popover-title-bg, 5%);
-    border-radius: 0 0 ($border-radius-large - 1) ($border-radius-large - 1);
+    border-top: 1px solid darken($popover-header-bg, 5%);
+    border-radius: 0 0 ($border-radius-lg - 1) ($border-radius-lg - 1);
   }
 }
 // scss-lint:enable SelectorDepth NestingDepth
@@ -108,7 +108,7 @@ $background: lighten($brand-success, 5%);
   background-color: $background;
 }
 
-@media (max-width: $grid-float-breakpoint-max) {
+@include media-breakpoint-down(md) {
   .navbar-notifications {
     position: absolute;
     top: 0;

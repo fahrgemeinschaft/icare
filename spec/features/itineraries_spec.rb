@@ -199,7 +199,7 @@ RSpec.describe 'Itineraries' do
       expect(page).to have_current_path itinerary_path(itinerary)
       expect(page).to have_content itinerary.description
       expect(page).not_to have_content 'John Doe'
-      expect(page).not_to have_css('img[src="http://graph.facebook.com/123456/picture?type=square"]')
+      expect(page).not_to have_css('img[src="http://graph.facebook.com/123456/picture?type=size"]')
     end
 
     it "doesn't allow guests to see pink itineraries" do

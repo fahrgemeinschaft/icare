@@ -1,5 +1,5 @@
 @import "twbs-variables";
-@import "twbs/bootstrap/mixins";
+@import "bootstrap/mixins";
 
 .navbar-profile-link {
   position: relative;
@@ -8,8 +8,8 @@
     position: absolute;
     top: 7px;
     left: 15px;
-    @include square(26px);
-    border-radius: $border-radius-small;
+    @include size(26px);
+    border-radius: $border-radius-sm;
   }
 
   span {
@@ -72,10 +72,4 @@
 
 .navbar-default .navbar-collapse {
   border-color: transparent;
-}
-
-@media (min-width: $grid-float-breakpoint) {
-  .navbar-default {
-    background-color: fade-out($navbar-default-bg, .1);
-  }
 }

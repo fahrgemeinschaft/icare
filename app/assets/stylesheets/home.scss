@@ -1,5 +1,5 @@
 @import "twbs-variables";
-@import "twbs/bootstrap/mixins";
+@import "bootstrap/mixins";
 
 html,
 .homepage {
@@ -40,14 +40,14 @@ html,
   display: table;
   @include size(100%, auto);
   margin-bottom: 0;
-  background-color: darken($brand-primary, 10%);
+  background-color: darken($primary, 10%);
 }
 
 .splashscreen-container {
   position: relative;
   display: table-cell;
   padding: 15px;
-  @include square(100%);
+  @include size(100%);
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 1px fade-out(#000, .1);
@@ -66,7 +66,7 @@ html,
   }
 
   h2 {
-    margin: 10px 0 $line-height-computed;
+    margin: 10px 0 $line-height-base;
     font-family: "Pacifico";
     font-size: 50px;
     font-weight: 400;
@@ -78,8 +78,8 @@ html,
   }
 
   h1 {
-    margin-bottom: $line-height-computed;
-    font-size: $font-size-h2;
+    margin-bottom: $line-height-base;
+    font-size: $h2-font-size;
   }
 
   .btn-why-facebook {
@@ -114,11 +114,11 @@ html,
 }
 
 .btn-why-facebook {
-  font-size: $font-size-small;
+  font-size: $small-font-size;
 }
 
 .featurettes {
-  margin-bottom: $line-height-computed;
+  margin-bottom: $line-height-base;
 }
 
 .featurette {
@@ -133,7 +133,7 @@ html,
   }
 
   .container {
-    max-width: $container-md;
+    max-width: map-get($container-max-widths, md);
   }
 
   .fa,
@@ -142,7 +142,7 @@ html,
     float: left;
     margin-right: 20px;
     font-size: 4em;
-    color: $brand-primary;
+    color: $primary;
   }
 }
 
@@ -150,7 +150,6 @@ html,
   position: absolute;
   bottom: 0;
   left: 0;
-  @include center-block;
   width: 100%;
 }
 
@@ -159,16 +158,16 @@ html,
 }
 
 .signin-terms {
-  margin-top: $line-height-computed;
+  margin-top: $line-height-base;
 }
 
-@media (min-width: $screen-sm-min) {
+@include media-breakpoint-up(sm) {
   .homepage .advertising {
     position: absolute;
   }
 
   .btn-fb {
-    @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+    @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);
   }
 
   .btn-why-facebook {
@@ -178,7 +177,7 @@ html,
   }
 
   .join-us {
-    font-size: $font-size-h1;
+    font-size: $h1-font-size;
   }
 
   .splashscreen {
@@ -213,7 +212,7 @@ html,
     padding: 60px 0;
 
     h3 {
-      font-size: $font-size-h1;
+      font-size: $h1-font-size;
     }
 
     p {

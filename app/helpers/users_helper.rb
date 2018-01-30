@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module UsersHelper
-  def facebook_profile_picture(user, type = :square)
+  def facebook_profile_picture(user, type = :size)
     if user_signed_in? && user.image?
       "#{user.image}?type=#{type}"
     else
@@ -9,7 +9,7 @@ module UsersHelper
     end
   end
 
-  def user_profile_picture(user, size: [50, 50], type: :square, style: 'img-responsive', opts: {})
+  def user_profile_picture(user, size: [50, 50], type: :size, style: 'img-responsive', opts: {})
     tag :img,
         { width: ("#{size[0]}px" if size),
           height: ("#{size[1]}px" if size),
