@@ -158,7 +158,7 @@ en-US:
       settings: Settings
       toggle_navigation: Toggle navigation
     footer:
-      message: Privacy is not guaranteed at this stage of development
+      github_repository: 'GitHub repository'
 
   pages:
     home:

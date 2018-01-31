@@ -158,7 +158,7 @@ it-IT:
       settings: Impostazioni
       toggle_navigation: Menu di navigazione
     footer:
-      message: La riservatezza non è garantita in questo stato di sviluppo
+      github_repository: 'Repository GitHub'
 
   pages:
     home:
