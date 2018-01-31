@@ -1,7 +1,20 @@
-@import "twbs-variables";
-@import "bootstrap/mixins";
+.main-navbar {
+  @extend .navbar-light;
+  @extend .bg-light;
+  @extend .navbar-expand-md;
+  @extend .fixed-top;
 
-.navbar-profile-link {
+  .navbar-toggler {
+    border-color: transparent;
+  }
+}
+
+.main-navbar-nav {
+  @extend .ml-auto;
+}
+
+.nav-profile-link {
+  @extend .nav-link;
   position: relative;
 
   img {
@@ -12,16 +25,16 @@
     border-radius: $border-radius-sm;
   }
 
-  span {
+  &__user-name {
     margin-left: 35px;
   }
 }
 
 .navbar-brand {
   font-family: "Pacifico";
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.25rem;
 
   > img {
     position: relative;
@@ -68,8 +81,4 @@
       transform: rotate3d(0, 0, 0, 0deg);
     }
   }
-}
-
-.navbar-default .navbar-collapse {
-  border-color: transparent;
 }

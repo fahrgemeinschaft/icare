@@ -155,6 +155,8 @@ it-IT:
       account_settings: Impostazioni account
       admin_users: Gestione utenti
       language: Lingua
+      settings: Impostazioni
+      toggle_navigation: Menu di navigazione
     footer:
       message: La riservatezza non è garantita in questo stato di sviluppo
 
